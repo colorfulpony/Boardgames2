@@ -1,17 +1,18 @@
 <template>
     <div>
-        Welcome
     </div>
 </template>
 
 <script>
+import api from '../../api'
 export default {
-    name: "Dashboard",
+    name: "Main",
     data() {
         return {
-            name: null,
         }
     },
 
+    methods: {
+    },
 }
 </script>

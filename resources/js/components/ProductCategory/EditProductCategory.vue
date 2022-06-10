@@ -8,15 +8,15 @@
                 </div>
                 <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class="form-control" v-model="product_category.title">
+                    <input type="text" name="title" class="form-control" v-model="product_category.title">
                 </div>
                 <div class="form-group">
                     <label>Slug</label>
-                    <input type="text" class="form-control" v-model="product_category.slug">
+                    <input type="text" name="slug" class="form-control" v-model="product_category.slug">
                 </div>
                 <div class="form-group">
                     <label>Description</label>
-                    <input type="text" class="form-control" v-model="product_category.description">
+                    <input type="text" name="description" class="form-control" v-model="product_category.description">
                 </div>
                 <button :disabled='getError()' type="submit" @click.prevent="updateProductCategory" class="btn btn-primary">Update Product Category</button>
             </div>

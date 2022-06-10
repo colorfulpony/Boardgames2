@@ -1,20 +1,20 @@
 <template>
-    <div>
+    <div class="content">
         <h4 class="text-center">Add Product Category</h4>
         <div class="row">
             <div class="col-md-6">
                 <form @submit.prevent="addProductCategory">
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" v-model="product_category.title">
+                        <input type="text" name="title" class="form-control" v-model="product_category.title">
                     </div>
                     <div class="form-group">
                         <label>Slug</label>
-                        <input type="text" class="form-control" v-model="product_category.slug">
+                        <input type="text" name="slug" class="form-control" v-model="product_category.slug">
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <input type="text" class="form-control" v-model="product_category.description">
+                        <input type="text" name="description" class="form-control" v-model="product_category.description">
                     </div>
                     <button type="submit" class="btn btn-primary">Add Product Category</button>
                 </form>
@@ -39,6 +39,7 @@ export default {
                     this.$router.push({name: 'product_categories'})
                 })
                 .catch(function (error) {
+                    console.log(error.response)
                     return Promise.reject(error);
                 });
         }

@@ -20,7 +20,11 @@ __webpack_require__.r(__webpack_exports__);
       users: []
     };
   },
-  methods: {}
+  methods: {
+    logout: function logout() {
+      this.$parent.$parent.logout();
+    }
+  }
 });
 
 /***/ }),

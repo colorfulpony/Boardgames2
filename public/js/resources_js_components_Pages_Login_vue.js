@@ -36,10 +36,6 @@ __webpack_require__.r(__webpack_exports__);
         _this.emitter.emit("get-token-login", localStorage.getItem('X_XSRF_TOKEN'));
 
         _this.emitter.emit("get-user-role_id", response.data.userRoleId);
-
-        _this.$router.push({
-          name: 'dashboard'
-        });
       })["catch"](function (error) {
         return Promise.reject(error);
       });

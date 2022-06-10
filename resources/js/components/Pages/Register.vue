@@ -14,7 +14,7 @@
                             <div class="form-group row">
                                 <label for="name" class="col-sm-4 col-form-label text-md-right">Name</label>
                                 <div class="col-md-6">
-                                    <input id="name" type="email" class="form-control" v-model="name" required
+                                    <input id="name" name="name" type="email" class="form-control" v-model="name" required
                                            autofocus autocomplete="off">
                                 </div>
                             </div>
@@ -22,7 +22,7 @@
                             <div class="form-group row">
                                 <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" v-model="email" required
+                                    <input id="email" name="email" type="email" class="form-control" v-model="email" required
                                            autofocus autocomplete="off">
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control" v-model="password"
+                                    <input id="password" name="password" type="password" class="form-control" v-model="password"
                                            required autocomplete="off">
                                 </div>
                             </div>
@@ -66,8 +66,7 @@ export default {
         handleSubmit() {
             api.post('/api/register', { name: this.name, email: this.email, password: this.password })
                 .then(response => {
-                    console.log(response)
-                    // this.$router.push({name : 'login'})
+                    this.$router.push({name : 'login'})
                 })
                 .catch(function (error) {
                     return Promise.reject(error);

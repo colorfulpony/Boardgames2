@@ -61,7 +61,6 @@ export default {
                     localStorage.setItem('USER_ROLE_ID', response.data.userRoleId)
                     this.emitter.emit("get-token-login", localStorage.getItem('X_XSRF_TOKEN'));
                     this.emitter.emit("get-user-role_id", response.data.userRoleId);
-                    this.$router.push({name : 'dashboard'})
                 })
                 .catch(function (error) {
                     return Promise.reject(error);

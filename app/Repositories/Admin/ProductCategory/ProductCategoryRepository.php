@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Admin;
+namespace App\Repositories\Admin\ProductCategory;
 
 use App\Models\ProductCategory as Model;
 use App\Repositories\CoreRepository;
@@ -32,24 +32,6 @@ class ProductCategoryRepository extends CoreRepository
     public function getEdit($id)
     {
         return $this->startConditions()->find($id);
-    }
-
-    /**
-     * Get Product Categories with paginate
-     *
-     * @param int $id
-     *
-     * @return Model
-     */
-    public function getProductCategoriesWithPaginate($perPage = null)
-    {
-        $columns = ['id', 'title', 'slug', 'description'];
-
-        $result = $this
-            ->startConditions()
-            ->select($columns)
-            ->paginate($perPage);
-            dd($result);
     }
 
     /**

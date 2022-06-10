@@ -1,6 +1,7 @@
 <template>
     <div>
-        Homepage
+        User
+        <a class="nav-item nav-link" style="cursor: pointer" @click.prevent="logout">Logout</a>
     </div>
 </template>
 
@@ -15,6 +16,9 @@ export default {
     },
 
     methods: {
-    }
+        logout() {
+            this.$parent.$parent.logout();
+        },
+    },
 }
 </script>
